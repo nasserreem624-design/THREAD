@@ -1,0 +1,7 @@
+{
+  "name": "THREAD - ستايلك، قصتك",
+  "description": "The ultimate streetwear destination for Gen Z & Millennials in Egypt and GCC. Premium apparel designed for self-expression.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
