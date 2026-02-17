@@ -50,11 +50,11 @@ export const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-4 z-10 text-center">
         <motion.div
-          style={{
+          animate={{
             rotateY: mousePos.x,
             rotateX: -mousePos.y,
-            transition: { type: 'spring', stiffness: 100, damping: 30 }
           }}
+          transition={{ type: 'spring', stiffness: 100, damping: 30 }}
           className="max-w-4xl mx-auto"
         >
           <motion.h1 
