@@ -1,4 +1,3 @@
-
 import { Hero } from "@/components/Hero";
 import { ProductCard } from "@/components/ProductCard";
 import { PRODUCTS } from "@/data/products";
@@ -220,8 +219,8 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-zinc-200 dark:border-zinc-800 pt-20 overflow-hidden relative">
-        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12 mb-20 relative z-20">
+      <footer className="border-t border-zinc-200 dark:border-zinc-800 pt-20">
+        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
           <div className="col-span-1 md:col-span-1">
              <Link href="/" className="flex flex-col mb-6">
                 <span className="text-3xl font-black tracking-tighter leading-none italic uppercase">THREAD</span>
@@ -258,32 +257,15 @@ export default function Home() {
           </div>
           <div>
             <h4 className="font-black text-xl mb-6">تواصل معنا</h4>
-            <ul className="flex flex-col gap-4 opacity-70 font-bold relative z-30">
-              <li>واتساب: <a 
-                href="https://wa.me/201060456161" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.open("https://wa.me/201060456161", "_blank", "noopener,noreferrer");
-                }}
-                className="hover:text-brand-gold transition-colors font-black"
-              >01060456161</a></li>
-              <li>إيميل: <a 
-                href="mailto:nasserreem624@gmail.com" 
-                className="hover:text-brand-gold transition-all underline underline-offset-4"
-                onClick={(e) => { 
-                  e.preventDefault();
-                  const gmailUrl = "https://mail.google.com/mail/?view=cm&fs=1&to=nasserreem624@gmail.com&su=استفسار%20عن%20THREAD&body=مرحباً%20،%20عايز%20استفسر%20عن%20...";
-                  window.open(gmailUrl, "_blank", "noopener,noreferrer");
-                }}
-              >nasserreem624@gmail.com</a></li>
+            <ul className="flex flex-col gap-4 opacity-70 font-bold">
+              <li>واتساب: <Link href="https://wa.me/201060456161?text=مرحباً%20THREAD%20عايز%20استفسر%20عن%20منتج" className="hover:text-brand-gold">01060456161</Link></li>
+              <li>إيميل: <a href="mailto:nasserreem624@gmail.com" className="relative z-10 hover:text-brand-gold transition-colors">nasserreem624@gmail.com</a></li>
               <li>المقر: القاهرة، مصر</li>
               <li className="text-sm italic opacity-50 mt-4 font-normal tracking-wide">"Your Style, Your Story"</li>
             </ul>
           </div>
         </div>
-        <div className="container mx-auto px-4 pb-10 flex flex-col md:flex-row items-center justify-between opacity-50 text-xs font-bold gap-4 relative z-20">
+        <div className="container mx-auto px-4 pb-10 flex flex-col md:flex-row items-center justify-between opacity-50 text-xs font-bold gap-4">
           <p>© 2024 THREAD Store. جميع الحقوق محفوظة.</p>
           <div className="flex gap-4">
              <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" className="h-4 filter grayscale contrast-0" alt="Visa" />

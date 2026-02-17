@@ -1,7 +1,7 @@
 
 "use client";
 import React, { useRef, useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 export const Hero = () => {
   const containerRef = useRef(null);
@@ -28,6 +28,7 @@ export const Hero = () => {
       onMouseMove={handleMouseMove}
       className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-black text-white"
     >
+      {/* Background Video/Poster */}
       <div className="absolute inset-0 z-0">
         {!prefersReducedMotion ? (
           <video 
@@ -46,13 +47,14 @@ export const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80" />
       </div>
 
+      {/* Content */}
       <div className="container mx-auto px-4 z-10 text-center">
         <motion.div
-          animate={{
+          style={{
             rotateY: mousePos.x,
             rotateX: -mousePos.y,
+            transition: { type: 'spring', stiffness: 100, damping: 30 }
           }}
-          transition={{ type: 'spring', stiffness: 100, damping: 30 }}
           className="max-w-4xl mx-auto"
         >
           <motion.h1 
@@ -101,6 +103,7 @@ export const Hero = () => {
         </motion.div>
       </div>
       
+      {/* Decorative Bottom Gradient */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10" />
     </section>
   );
